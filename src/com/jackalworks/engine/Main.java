@@ -57,6 +57,7 @@ public class Main {
                 if (Window.isCloseRequested()) stop();
 
                 Time.setDelta(frameTime);
+                Input.update();
 
                 game.input();
                 game.update();

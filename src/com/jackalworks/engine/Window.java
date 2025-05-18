@@ -8,7 +8,7 @@ import org.lwjgl.opengl.*;
 
 public class Window {
 
-    private static long window;
+    private static long window = 0;
 
     public static void createWindow(int width, int height, String title) {
         glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
@@ -53,5 +53,9 @@ public class Window {
 
     public static String getTitle() {
         return glfwGetWindowTitle(window);
+    }
+
+    public static long getHandle() {
+        return window;
     }
 }
