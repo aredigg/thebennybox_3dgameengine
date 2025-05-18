@@ -29,6 +29,10 @@ public class Window {
         glfwSwapBuffers(window);
     }
 
+    public static void dispose() {
+        glfwDestroyWindow(window);
+    }
+
     public static boolean isCloseRequested() {
         return glfwWindowShouldClose(window);
     }
